@@ -17,8 +17,14 @@
 [class*="col-"] {
     width: 100%;
   }
+
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+}
   
-@media only screen and (min-width: 600px) {
+@media (min-width: 600px) {
     /* For tablets: */
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
@@ -32,9 +38,10 @@
     .col-s-10 {width: 83.33%;}
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
+    
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
     /* For desktop: */
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
@@ -50,60 +57,43 @@
     .col-12 {width: 100%;}
   }
 
+
+
 body {
     margin: 0;
     font-family: "Poppins";
-    color: white;
-  }
+}
 
-ul {
+ul  {
     padding: 0;
 }
 
 li {
     list-style: none;
+    margin-bottom: 5px;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
+li i {
+    margin-right: 10px;
 }
 
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: #8e44ad;
+    color: #ffffff;
 }
 
-footer h3 {
-    margin-top: 0;
+.logo {
+    margin-left: 20px;
 }
 
-footer .logo {
-    background-color: #8e44ad;
-    font-weight:bold;
-    font-size: 32px;
-    text-align: center;
-}
-
-footer .menu ul li {
-    padding: 3px 0;
-}
-
-footer .layanan {
-    align-items: center;
-}
-
-footer .layanan ul {
-    margin: 0 0;    
-}
-
-footer .layanan ul li {
-    padding: 3px 0;
-}
-
-footer .social-media ul li {
-    padding: 3px 0;
-}
-
-footer .social-media i {
-    margin: 0 5px 0 0;
+.copyright {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    background-color: #7b3c96;
+    padding-left: 15px;
 }
