@@ -64,6 +64,10 @@ body {
     font-family: "Poppins";
 }
 
+a {
+    text-decoration: none;
+}
+
 ul  {
     padding: 0;
 }
@@ -83,6 +87,10 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #8e44ad;
+    color: #ffffff;
+}
+
+footer a {
     color: #ffffff;
 }
 
