@@ -17,6 +17,134 @@ div {
   padding: 0;
 }
 
+header {
+  width: 100%;
+  background-color: #8e44ad;
+  position:fixed;
+  top:0;
+  z-index:99;
+}
+/* navbar */
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 10px;
+ color: #fff;
+}
+.nav-links a {
+ color: #fff;
+}
+/* logo */
+.logo-header {
+ font-size: 32px;
+ font-weight: bold;
+}
+/* msnu */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 18px;
+}
+.menu li:hover {
+ background-color: #9b59b6;
+ border-radius: 5px;
+ transition: 0.5s ease;
+}
+.menu li {
+ padding: 5px 14px;
+}
+/* dropdown menu*/
+
+.layanan,.about-us {
+ position: relative; /*relative agar dropdown bisa abs*/
+}
+.dropdown {
+ background-color: #8e44ad;
+ padding: 1em 0;
+ position: absolute; /**/
+ display: none;
+ left:-1.5%;
+ border-radius: 8px;
+ top: 35px;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #9b59b6;
+}
+
+.layanan:hover .dropdown, .about-us:hover .dropdown{
+ display: block;
+}
+
+/* checkbox Navbar menu default chckbox dan hamburger tidak terlihat */
+input[type=checkbox]{
+ display: none;
+} 
+/*hamburger menu*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+.hamburger2, .hamburger3{
+  display:none;
+  font-size: 18px;
+  user-select:none;
+}
+/* madia query jika ukuran 786 kebawah*/
+@media (max-width: 786px) {
+  .menu { 
+   display:none;
+   position: absolute;
+   background-color:#8e44ad;
+   right: 0;
+   left: 0;
+   text-align: center;
+   padding: 16px 0;
+  }
+  .menu li:hover {
+   display: inline-block;
+   background-color:#9b59b6;
+   transition: 0.3s ease;
+  }
+  .menu li  li {
+   margin-top: 12px;
+  }
+  input[id="checkbox_toggle"]:checked ~ .menu{
+   display: block;
+  }
+  .hamburger {
+   display: block;
+  }
+  input[id="checkbox_toggle2"]:checked ~ .about-us dropdown{
+   display: block;
+  }
+  input[id="checkbox_toggle3"]:checked ~ .layanan dropdown{
+   display: block;
+  }
+  .hamburger2, .hamburger3 {
+   display: inline-block;
+  }
+  .dropdown {    
+   left: 50%;
+   top: 30px;
+   transform: translateX(35%);
+  }
+  .dropdown li:hover {
+   background-color: #9b59b6;
+  }
+}
+
+
+
 /* Adib */
 .main {
   padding: 0px;
